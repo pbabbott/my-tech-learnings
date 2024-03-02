@@ -22,6 +22,19 @@
             "uriFormat": "http://localhost:%s",
             "action": "openExternally"
           }
+       },
+       {
+        "name": "npm start:console",
+        "request": "launch",
+        "runtimeArgs": [
+            "run-script",
+            "start:console"
+        ],
+        "runtimeExecutable": "npm",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "node"
        }
     ]
 }
