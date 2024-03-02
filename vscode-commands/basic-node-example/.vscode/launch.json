@@ -6,7 +6,9 @@
     "configurations": [
        {
         "name": "npm start:dev",
+        "type": "node",
         "request": "launch",
+        "console": "integratedTerminal",
         "runtimeArgs": [
             "run-script",
             "start:dev"
@@ -15,7 +17,11 @@
         "skipFiles": [
             "<node_internals>/**"
         ],
-        "type": "node"
+        "serverReadyAction": {
+            "pattern": "listening on port: ([0-9]+)",
+            "uriFormat": "http://localhost:%s",
+            "action": "openExternally"
+          }
        }
     ]
 }

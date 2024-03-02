@@ -8,7 +8,8 @@ const port = 3000
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  const message = 'hello world!'
+  res.send(message)
 })
 
 app.get('/random', (req, res) => {

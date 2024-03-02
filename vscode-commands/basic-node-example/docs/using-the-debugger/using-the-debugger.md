@@ -1,5 +1,9 @@
 # Using the Debugger
 
+This documentation is a continuation of looking at this article:
+
+https://code.visualstudio.com/docs/editor/debugging
+
 ## Launching from Main
 
 At the bottom of the VS Code window, there's an option to spawn the debugger or the various launch configurations that have been set up.  This can be nice if you don't want to open the "Run and Debug" view.
