@@ -15,6 +15,15 @@ I am particularly interested to see how remote debugging might work.
 
 In order to get started with this example, please refer to the [Getting Started Guide](./docs/getting-started.md)
 
+# Solutions / Explorations
+
+Below are some of my learnings and solutions to the problem statement above.
+
+## VS Code and Typescript
+
+- [Typescript Builds](./docs/typescript-builds/README.md) - This shows how to integrate Typescript builds within VS Code
+
+
 `npm init`
 `npm i -D typescript`
 `npx tsc --init`

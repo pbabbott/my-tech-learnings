@@ -24,10 +24,10 @@ Below are some of my learnings and solutions to the problem statement above.
 
 I read through all of the VS Code Debugging documentation and captured my notes and various screenshots across these articles.  I tried to focus on just the most useful bits rather than just copy-pasting the whole documentation.
 
-- [Basic Debugging](./docs/basic-debugging/basic-debugging.md) - This shows how to set up basic debugging configurations with Node.js.
-- [Using the Debugger](./docs/using-the-debugger/using-the-debugger.md) - This doc explains how to use the debugger with the most important hot-keys. 
-- [Advanced Setup](./docs/advanced-setup/advanced-setup.md) - Here are some advanced setup features which can make life even easier
-- [Node.js Debugging](./docs/nodejs-debugging/nodejs-debugging.md) - Here are the most useful bits of the VS Code guide to debugging Node.js applications specifically.
+- [Basic Debugging](./docs/basic-debugging/README.md) - This shows how to set up basic debugging configurations with Node.js.
+- [Using the Debugger](./docs/using-the-debugger/README.md) - This doc explains how to use the debugger with the most important hot-keys. 
+- [Advanced Setup](./docs/advanced-setup/README.md) - Here are some advanced setup features which can make life even easier
+- [Node.js Debugging](./docs/nodejs-debugging/README.md) - Here are the most useful bits of the VS Code guide to debugging Node.js applications specifically.
 
 # Reflection
 
