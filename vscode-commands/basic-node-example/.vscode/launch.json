@@ -21,7 +21,7 @@
             "pattern": "listening on port: ([0-9]+)",
             "uriFormat": "http://localhost:%s",
             "action": "openExternally"
-          }
+        }
        },
        {
         "name": "npm start:console",
