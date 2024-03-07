@@ -20,10 +20,19 @@
             "serverReadyAction": {
                 "pattern": "listening on port: ([0-9]+)",
                 "uriFormat": "http://localhost:%s",
-                "action": "openExternally",
+                "action": "openExternally"
             },
             "preLaunchTask": "npm:build",
-            "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
+            ]
+        },
+        {
+            "name": "Docker Node.js Launch",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "platform": "node"
         }
     ]
 }

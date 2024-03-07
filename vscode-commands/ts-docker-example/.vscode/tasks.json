@@ -6,11 +6,39 @@
 			"script": "build",
 			"group": {
 				"kind": "build",
-				"isDefault": true
+				"isDefault": false
 			},
 			"problemMatcher": [],
 			"label": "npm:build",
 			"detail": "npm run clean && tsc"
+		},
+		{
+			"type": "docker-build",
+			"label": "docker:build:dev",
+			"platform": "node",
+			"group": {
+				"kind": "build",
+			},
+			"dockerBuild": {
+				"dockerfile": "${workspaceFolder}/Dockerfile",
+				"target": "development",
+				"context": "${workspaceFolder}",
+				"pull": true
+			}
+		},
+		{
+			"type": "docker-build",
+			"label": "docker:build:prod",
+			"platform": "node",
+			"group": {
+				"kind": "build",
+			},
+			"dockerBuild": {
+				"dockerfile": "${workspaceFolder}/Dockerfile",
+				"target": "production",
+				"context": "${workspaceFolder}",
+				"pull": true
+			}
 		}
 	]
 }

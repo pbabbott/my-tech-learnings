@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  tsdockerexample:
+    image: tsdockerexample
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: production
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000

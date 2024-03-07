@@ -6,6 +6,7 @@ To work with this project, here's what you'll need available on your computer.
 - VS Code
 - Node.js version 18
 - NPM version 9
+- Locally running docker daemon
 
 ## Node.js Commands:
 

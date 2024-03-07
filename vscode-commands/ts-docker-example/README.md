@@ -22,8 +22,9 @@ Below are some of my learnings and solutions to the problem statement above.
 ## VS Code and Typescript
 
 - [Typescript Builds](./docs/typescript-builds/README.md) - This shows how to integrate Typescript builds within VS Code
-
-
-`npm init`
-`npm i -D typescript`
-`npx tsc --init`
+- [Debugging Typscript](./docs/typescript-builds/README.md) - This document demonstrates how to efficiently debug a Typescript project with VS Code
+- [Docker Integration](./docs/docker-integration/README.md) - This document shows what happens when you use VS Code code generation tools to automatically integrate with docker.
+- [Basic Docker Build](./docs/basic-docker-build/README.md)
+  - After sorting through the automatically generated code, I decided to try setting up a pattern to run docker builds via VS Code Tasks.  
+  - In this exploration, I also determined how to use the Docker for VS Code extension to manage a build.
+  - 
