@@ -1,6 +1,6 @@
-#
+########################################
 # Stage 1: Development build
-#
+########################################
 FROM node:lts-alpine as development
 
 WORKDIR /app
@@ -19,11 +19,11 @@ RUN npm run build
 
 CMD ["npm", "start:dev"]
 
-#
-# Stage 2: Production Build
-#
+########################################
+# Stage 2: Release Build
+########################################
 
-FROM node:lts-alpine as production
+FROM node:lts-alpine as release
 
 WORKDIR /app
 

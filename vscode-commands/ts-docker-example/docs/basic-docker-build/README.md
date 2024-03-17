@@ -93,14 +93,14 @@ For this test, I've added a second build task:
 ```json
 {
     "type": "docker-build",
-    "label": "docker:build:prod",
+    "label": "docker:build:release",
     "platform": "node",
     "group": {
         "kind": "build",
     },
     "dockerBuild": {
         "dockerfile": "${workspaceFolder}/Dockerfile",
-        "target": "production",
+        "target": "release",
         "context": "${workspaceFolder}",
         "pull": true
     }
@@ -109,7 +109,6 @@ For this test, I've added a second build task:
 
 Now, when we run `Docker Images: Build Image...`  we get a prompt asking which docker image we want to build:
 <img width="400" src="./multiple-docker-builds.png" alt="Multiple Docker Builds" />
-
 
 # Reflection
 

@@ -6,6 +6,7 @@
     "configurations": [
         {
             "name": "npm start:dev",
+             
             "type": "node",
             "request": "launch",
             "console": "integratedTerminal",
@@ -28,11 +29,16 @@
             ]
         },
         {
-            "name": "Docker Node.js Launch",
-            "type": "docker",
-            "request": "launch",
-            "preLaunchTask": "docker-run: debug",
-            "platform": "node"
+            "name": "docker debug:dev",
+            "type":"node",
+            "request": "attach",
+            "restart": true,
+            "port": 9229,
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/app",
+            "preLaunchTask": "docker:run:dev",
+            "postDebugTask": "docker:stop:dev",
         }
     ]
 }

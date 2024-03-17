@@ -6,7 +6,7 @@ const port = 3000
 
 
 app.get('/', (req, res) => {
-  const message = 'hello from ts-docker-example!!!'
+  const message = 'hello from ts-docker-example!!'
   res.send(message)
 })
 
@@ -19,3 +19,11 @@ app.get('/random', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port: ${port}`)
 })
+
+
+const signals = ['SIGINT', 'SIGTERM', 'SIGQUIT']
+signals.forEach(signal => process.on(signal, () => {
+    console.log(`Received signal: ${signal}`)
+    console.log('Program Terminated.')
+    process.exit();
+}));

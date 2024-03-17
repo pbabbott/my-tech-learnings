@@ -28,5 +28,5 @@ There is one entrypoint into this API: `src/index.js` - this is meant to start t
 
 `npm run build` - This runs a build and outputs javascript files into a `./dist` folder
 
-`npm run start` - This targets the `./dist/index.js` file and is meant as an entry point for production builds.
+`npm run start` - This targets the `./dist/index.js` file and is meant as an entry point for release builds.
 

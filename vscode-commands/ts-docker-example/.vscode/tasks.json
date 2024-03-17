@@ -17,7 +17,7 @@
 			"label": "docker:build:dev",
 			"platform": "node",
 			"group": {
-				"kind": "build",
+				"kind": "build"
 			},
 			"dockerBuild": {
 				"dockerfile": "${workspaceFolder}/Dockerfile",
@@ -27,17 +27,79 @@
 			}
 		},
 		{
+			"type": "docker-run",
+			"label": "docker:run:dev",
+			"dependsOn": [
+				"docker:build:dev"
+			],
+			"dockerRun": {
+				"command": "npm run start:debug",
+				"ports": [
+					{
+						"containerPort": 3000,
+						"hostPort": 3000
+					}
+				],
+				"volumes": [
+					{
+						"localPath": "${workspaceFolder}/src",
+						"containerPath": "/app/src"
+					}
+				],
+				"env": {
+					"NODE_ENV": "development"
+				},
+				"containerName": "ts-docker-example"
+			},
+			"node": {
+				"enableDebugging": true
+			}
+		},
+		{
+            "type": "shell",
+            "label": "docker:stop:dev",
+            "command": "docker",
+            "args": [
+                "stop",
+                "ts-docker-example",
+                "&&",
+                "docker",
+                "rm",
+                "ts-docker-example"
+            ],
+            "problemMatcher": []
+        },
+		{
 			"type": "docker-build",
-			"label": "docker:build:prod",
+			"label": "docker:build:release",
 			"platform": "node",
 			"group": {
-				"kind": "build",
+				"kind": "build"
 			},
 			"dockerBuild": {
 				"dockerfile": "${workspaceFolder}/Dockerfile",
-				"target": "production",
+				"target": "release",
 				"context": "${workspaceFolder}",
 				"pull": true
+			}
+		},
+		{
+			"type": "docker-run",
+			"label": "docker:run:release",
+			"dependsOn": [
+				"docker:build:release"
+			],
+			"dockerRun": {
+				"command": "npm run start",
+				"ports": [
+					{
+						"containerPort": 3000,
+						"hostPort": 3000
+					}
+				],
+				"env": {
+					"NODE_ENV": "production"
+				}
 			}
 		}
 	]
