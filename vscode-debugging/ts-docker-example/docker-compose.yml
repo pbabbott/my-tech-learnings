@@ -6,8 +6,12 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      target: release
+      target: development
     environment:
       NODE_ENV: development
+    volumes:
+      - ./src:/app/src
     ports:
       - 3000:3000
+      - 9229:9229
+    command: "npm run start:debug"

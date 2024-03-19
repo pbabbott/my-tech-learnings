@@ -101,6 +101,19 @@
 					"NODE_ENV": "production"
 				}
 			}
+		},
+		{
+			"type": "docker-compose",
+			"label": "compose:up",
+			"dockerCompose": {
+				"up": {
+					"detached": true,
+					"build": true
+				},
+				"files": [
+					"${workspaceFolder}/docker-compose.yml"
+				]
+			}
 		}
 	]
 }

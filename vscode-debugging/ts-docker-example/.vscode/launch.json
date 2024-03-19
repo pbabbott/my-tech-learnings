@@ -6,7 +6,6 @@
     "configurations": [
         {
             "name": "npm start:dev",
-             
             "type": "node",
             "request": "launch",
             "console": "integratedTerminal",
@@ -39,6 +38,17 @@
             "remoteRoot": "/app",
             "preLaunchTask": "docker:run:dev",
             "postDebugTask": "docker:stop:dev",
-        }
+        },
+        {
+            "name": "docker-compose debug:dev",
+            "type":"node",
+            "request": "attach",
+            "port": 9229,
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/app",
+            "preLaunchTask": "compose:up",
+            "timeout": 7000
+        },
     ]
 }

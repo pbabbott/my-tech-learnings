@@ -29,3 +29,7 @@ Below are some of my learnings and solutions to the problem statement above.
   - In this exploration, I also determined how to use the Docker for VS Code extension to manage a build.
 - [Docker Runtime](./docs/docker-runtime/README.md) - Next, I set up debugging and hot-reloading with a docker container leveraging the tasks I had just built.
 - [Docker Compose Debugging](./docs/docker-compose/README.md) - Creating and destroying containers felt a bit clunky, so my next step was to set up debugging with docker compose.
+
+# Reflections
+
+> Coming soon!

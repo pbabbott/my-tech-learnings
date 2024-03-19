@@ -7,6 +7,7 @@ const port = 3000
 
 app.get('/', (req, res) => {
   const message = 'hello from ts-docker-example!!'
+  console.log('GET /')
   res.send(message)
 })
 
