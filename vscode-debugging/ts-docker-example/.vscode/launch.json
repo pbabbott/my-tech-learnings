@@ -48,7 +48,7 @@
             "localRoot": "${workspaceFolder}",
             "remoteRoot": "/app",
             "preLaunchTask": "compose:up",
-            "timeout": 7000
+            "postDebugTask": "compose:down",
         },
     ]
 }

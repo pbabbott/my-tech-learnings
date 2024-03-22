@@ -29,7 +29,15 @@ Below are some of my learnings and solutions to the problem statement above.
   - In this exploration, I also determined how to use the Docker for VS Code extension to manage a build.
 - [Docker Runtime](./docs/docker-runtime/README.md) - Next, I set up debugging and hot-reloading with a docker container leveraging the tasks I had just built.
 - [Docker Compose Debugging](./docs/docker-compose/README.md) - Creating and destroying containers felt a bit clunky, so my next step was to set up debugging with docker compose.
+- [Kubernetes Debugging](./docs/kubernetes-debugging/README.md) - Here I explore how to attach the debugger to a locally running kubernetes environment.
 
 # Reflections
+
+## Cool Shortcuts
+
+- `CTRL+SHIFT+M` - this brings up the Problems window in VS Code. `m` is the last letter of `problem`!
+- `CTRL+SHIFT+B` - this pulls up a menu for build tasks, or just runs the default one.
+- `CTRL+SHIFT+P`, `task`, `Tasks: Run Task` - This gives the option to run any task.
+- `F5` - Starts the most recently selected launch.json configuration.
 
 > Coming soon!

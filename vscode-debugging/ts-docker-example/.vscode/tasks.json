@@ -114,6 +114,16 @@
 					"${workspaceFolder}/docker-compose.yml"
 				]
 			}
+		},
+		{
+			"type": "docker-compose",
+			"label": "compose:down",
+			"dockerCompose": {
+				"down": {},
+				"files": [
+					"${workspaceFolder}/docker-compose.yml"
+				]
+			}
 		}
 	]
 }

@@ -110,3 +110,48 @@ After some thought, I tried to set up a vs code task called `compose:up:logs` to
 Unfortunately, streaming logs causes VS Code to hang and ultimately the debugger does not attach.  Setting `isBackground` to `true` seems to have no effect.
 
 I have realized that running `docker compose up` is the launch activity, and streaming logs is just something that needs to happen separately.
+
+## Automatic attach
+
+I was able to get the debugger to automatically attach to the docker compose process.  In messing about with the logs, I introduced a timeout to the `compose:up` task, but thankfully it wasn't needed for the debugger to just magically attach to the process.  Additionally, introducing `compose:down` was easy enough to introduce for teardown as well.  Here's my final launch.json configuration:
+
+```json
+{
+    "name": "docker-compose debug:dev",
+    "type":"node",
+    "request": "attach",
+    "port": 9229,
+    "address": "localhost",
+    "localRoot": "${workspaceFolder}",
+    "remoteRoot": "/app",
+    "preLaunchTask": "compose:up",
+    "postDebugTask": "compose:down",
+},
+```
+
+And the corresponding compose tasks:
+```json
+{
+  "type": "docker-compose",
+  "label": "compose:up",
+  "dockerCompose": {
+    "up": {
+      "detached": true,
+      "build": true
+    },
+    "files": [
+      "${workspaceFolder}/docker-compose.yml"
+    ]
+  }
+},
+{
+  "type": "docker-compose",
+  "label": "compose:down",
+  "dockerCompose": {
+    "down": {},
+    "files": [
+      "${workspaceFolder}/docker-compose.yml"
+    ]
+  }
+}
+```
